@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/bair-react/static/css/main.e35bb81a.chunk.css",
-    "main.js": "/bair-react/static/js/main.b0090243.chunk.js",
-    "main.js.map": "/bair-react/static/js/main.b0090243.chunk.js.map",
+    "main.css": "/bair-react/static/css/main.6726e8b2.chunk.css",
+    "main.js": "/bair-react/static/js/main.d4ce69d0.chunk.js",
+    "main.js.map": "/bair-react/static/js/main.d4ce69d0.chunk.js.map",
     "runtime-main.js": "/bair-react/static/js/runtime-main.08b15368.js",
     "runtime-main.js.map": "/bair-react/static/js/runtime-main.08b15368.js.map",
-    "static/js/2.192388a8.chunk.js": "/bair-react/static/js/2.192388a8.chunk.js",
-    "static/js/2.192388a8.chunk.js.map": "/bair-react/static/js/2.192388a8.chunk.js.map",
+    "static/js/2.f4c4fc03.chunk.js": "/bair-react/static/js/2.f4c4fc03.chunk.js",
+    "static/js/2.f4c4fc03.chunk.js.map": "/bair-react/static/js/2.f4c4fc03.chunk.js.map",
     "index.html": "/bair-react/index.html",
-    "static/css/main.e35bb81a.chunk.css.map": "/bair-react/static/css/main.e35bb81a.chunk.css.map",
-    "static/js/2.192388a8.chunk.js.LICENSE.txt": "/bair-react/static/js/2.192388a8.chunk.js.LICENSE.txt"
+    "static/css/main.6726e8b2.chunk.css.map": "/bair-react/static/css/main.6726e8b2.chunk.css.map",
+    "static/js/2.f4c4fc03.chunk.js.LICENSE.txt": "/bair-react/static/js/2.f4c4fc03.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.08b15368.js",
-    "static/js/2.192388a8.chunk.js",
-    "static/css/main.e35bb81a.chunk.css",
-    "static/js/main.b0090243.chunk.js"
+    "static/js/2.f4c4fc03.chunk.js",
+    "static/css/main.6726e8b2.chunk.css",
+    "static/js/main.d4ce69d0.chunk.js"
   ]
 }
