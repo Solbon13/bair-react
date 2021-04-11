@@ -1,9 +1,9 @@
-.coin-container {
+.coin_container {
     display: flex;
     justify-content: center;
   }
   
-  .coin-row {
+  .coin_row {
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -32,30 +32,30 @@
     margin-right: 10px;
   }
   
-  .coin-symbol {
+  .coin_symbol {
     text-transform: uppercase;
   }
   
-  .coin-data {
+  .coin_data {
     display: flex;
     text-align: right;
     justify-content: space-between;
     width: 100%;
   }
   
-  .coin-price {
+  .coin_price {
     width: 110px;
   }
   
-  .coin-volume {
+  .coin_volume {
     width: 155px;
   }
   
-  .coin-marketcap {
+  .coin_marketcap {
     width: 230px;
   }
   
-  .coin-percent {
+  .coin_percent {
     width: 100px;
   }
   

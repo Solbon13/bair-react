@@ -1,23 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import { connect } from 'react-redux';
+
 import './App.css';
 import Coin from './Coin';
+import { getCoins } from './redux/coinReducer'
+import { createPages } from './utils/pagesCreator'
 
-function App() {
-  const [coins, setCoins] = useState([]);
+function App(props) {
   const [search, setSearch] = useState('');
+  const {coins, getCoins, currentPage, totalCount, pageSize} = props;
+  console.log(props)
 
   useEffect(() => {
-    axios
-      .get(
-        'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false'
-      )
-      .then(res => {
-        setCoins(res.data);
-        console.log(res.data);
-      })
-      .catch(error => console.log(error));
-  }, []);
+    getCoins(currentPage, pageSize)
+  }, [getCoins]);
 
   const handleChange = e => {
     setSearch(e.target.value);
@@ -26,6 +22,11 @@ function App() {
   const filteredCoins = coins.filter(coin =>
     coin.name.toLowerCase().includes(search.toLowerCase())
   );
+
+  const pagesCount = Math.ceil(totalCount / pageSize)
+  const pages = []
+    createPages(pages, pagesCount, currentPage)
+    console.log(pages)
 
   return (
     <div className='coin-app'>
@@ -54,8 +55,27 @@ function App() {
           />
         );
       })}
+      <div className="pages">
+                {pages.map((page, index) => <span
+                    key={index}
+                    className={currentPage == page ? 'current-page' : 'page'}
+                    onClick={() => getCoins(page, pageSize)}
+                    >{page}</span>)}
+            </div>
+
     </div>
   );
 }
 
-export default App;
+let mapStateToProps = (state) => {
+  return {
+    coins: state.coin.coins,
+    currentPage: state.coin.currentPage,
+    totalCount: state.coin.totalCount,
+    pageSize: state.coin.pageSize
+  }
+}
+
+export default connect(mapStateToProps, {
+  getCoins
+})(App)

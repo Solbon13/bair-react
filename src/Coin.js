@@ -1,5 +1,5 @@
 import React from 'react';
-import './Coin.css';
+import styles from './Coin.module.css';
 
 const Coin = ({
   name,
@@ -11,24 +11,24 @@ const Coin = ({
   priceChange
 }) => {
   return (
-    <div className='coin-container'>
-      <div className='coin-row'>
-        <div className='coin'>
+    <div className={styles.coin_container}>
+      <div className={styles.coin_row}>
+        <div className={styles.coin}>
           <img src={image} alt='crypto' />
           <h1>{name}</h1>
-          <p className='coin-symbol'>{symbol}</p>
+          <p className={styles.coin_symbol}>{symbol}</p>
         </div>
-        <div className='coin-data'>
-          <p className='coin-price'>${price}</p>
-          <p className='coin-volume'>${volume.toLocaleString()}</p>
+        <div className={styles.coin_data}>
+          <p className={styles.coin_price}>${price}</p>
+          <p className={styles.coin_volume}>${volume.toLocaleString()}</p>
 
           {priceChange < 0 ? (
-            <p className='coin-percent red'>{priceChange.toFixed(2)}%</p>
+            <p className={styles.coiyn_percent, styles.red}>{priceChange.toFixed(2)}%</p>
           ) : (
-            <p className='coin-percent green'>{priceChange.toFixed(2)}%</p>
+            <p className={styles.coin_percent, styles.green}>{priceChange.toFixed(2)}%</p>
           )}
 
-          <p className='coin-marketcap'>
+          <p className={styles.coin_marketcap}>
             Mkt Cap: ${marketcap.toLocaleString()}
           </p>
         </div>
